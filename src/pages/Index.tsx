@@ -4,7 +4,7 @@ import { MessageCircle } from 'lucide-react';
 interface ClothingItem {
   id: number;
   name: string;
-  category: 'amayi' | 'abambo' | 'ana' | 'anyamata';
+  category: 'amayi' | 'abambo' | 'ana' | 'anyamata' | 'tisheti';
   price: number;
   image: string;
   sizes: string[];
@@ -82,6 +82,30 @@ const clothingItems: ClothingItem[] = [
     price: 1800,
     image: 'https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=400&h=500&fit=crop',
     sizes: ['S', 'M', 'L', 'XL', 'XXL']
+  },
+  {
+    id: 10,
+    name: 'Tisheti Yoyenera',
+    category: 'tisheti',
+    price: 1500,
+    image: 'https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=400&h=500&fit=crop',
+    sizes: ['S', 'M', 'L', 'XL']
+  },
+  {
+    id: 11,
+    name: 'Tisheti Yachikulu',
+    category: 'tisheti',
+    price: 1200,
+    image: 'https://images.unsplash.com/photo-1503149526-cd71b2e61e84?w=400&h=500&fit=crop',
+    sizes: ['2-3', '4-5', '6-7', '8-9']
+  },
+  {
+    id: 12,
+    name: 'Tisheti Yachikulu Yoyenera',
+    category: 'tisheti',
+    price: 1800,
+    image: 'https://images.unsplash.com/photo-1518272258180-a8a0d1c76c79?w=400&h=500&fit=crop',
+    sizes: ['2-3', '4-5', '6-7', '8-9', '10-11']
   }
 ];
 
