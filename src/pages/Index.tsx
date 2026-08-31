@@ -4,7 +4,7 @@ import { MessageCircle } from 'lucide-react';
 interface ClothingItem {
   id: number;
   name: string;
-  category: 'amayi' | 'abambo' | 'ana';
+  category: 'amayi' | 'abambo' | 'ana' | 'anyamata';
   price: number;
   image: string;
   sizes: string[];
@@ -58,11 +58,35 @@ const clothingItems: ClothingItem[] = [
     price: 1200,
     image: 'https://images.unsplash.com/photo-1503149526-cd71b2e61e84?w=400&h=500&fit=crop',
     sizes: ['2-3', '4-5', '6-7', '8-9']
+  },
+  {
+    id: 7,
+    name: 'Polo Shirt',
+    category: 'anyamata',
+    price: 2200,
+    image: 'https://images.unsplash.com/photo-1618886996028-b0aa76cf1a1f?w=400&h=500&fit=crop',
+    sizes: ['S', 'M', 'L', 'XL', 'XXL']
+  },
+  {
+    id: 8,
+    name: 'Chino Pants',
+    category: 'anyamata',
+    price: 3800,
+    image: 'https://images.unsplash.com/photo-1473127895723-93b5241f74e3?w=400&h=500&fit=crop',
+    sizes: ['28', '30', '32', '34', '36', '38']
+  },
+  {
+    id: 9,
+    name: 'Casual T-Shirt',
+    category: 'anyamata',
+    price: 1800,
+    image: 'https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=400&h=500&fit=crop',
+    sizes: ['S', 'M', 'L', 'XL', 'XXL']
   }
 ];
 
 export default function Index() {
-  const [selectedCategory, setSelectedCategory] = useState<'all' | 'amayi' | 'abambo' | 'ana'>('all');
+  const [selectedCategory, setSelectedCategory] = useState<'all' | 'amayi' | 'abambo' | 'ana' | 'anyamata'>('all');
   const [cart, setCart] = useState<{ item: ClothingItem; size: string }[]>([]);
   const [selectedSize, setSelectedSize] = useState<Record<number, string>>({});
   const [paymentMethod, setPaymentMethod] = useState<'mpamba' | 'airtel' | null>(null);
@@ -149,6 +173,7 @@ export default function Index() {
               { id: 'all', label: 'Zonsezi' },
               { id: 'amayi', label: 'Zovala za Amayi' },
               { id: 'abambo', label: 'Zovala za Abambo' },
+              { id: 'anyamata', label: 'Zovala za Anyamata' },
               { id: 'ana', label: 'Zovala za Ana' }
             ].map(cat => (
               <button
